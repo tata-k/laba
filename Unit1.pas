@@ -15,10 +15,12 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure DirectoryListBox1Change(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -55,6 +57,12 @@ end;
 procedure TForm1.Button3Click(Sender: TObject);
 begin
 copyfile(pchar(x),pchar(x1), true);
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+createdir('Новая папка');
+showmessage('Новая папка создана');
 end;
 
 end.
